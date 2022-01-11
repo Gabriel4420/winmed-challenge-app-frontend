@@ -29,7 +29,7 @@ const Doctor = () => {
   const onSubmit = async (values, actions) => {
     try {
       const { data: data } = await api.post(
-        'register/doctor',
+        'register_doctor',
         {
           name: values.name,
           sex: values.sex,
@@ -47,6 +47,7 @@ const Doctor = () => {
         {
           headers: {
             Authorization: `Bearer ${cookies.token}`,
+            'Content-Type': 'application/json',
           },
         },
       )
@@ -112,7 +113,7 @@ const Doctor = () => {
                     </div>
                     <div className="col">
                       <label>Idade</label>
-                      <Field name="age" type="text" />
+                      <Field name="age" type="number" />
                     </div>
                   </div>
                   <div className="form-control-group">
@@ -152,7 +153,7 @@ const Doctor = () => {
                   <div className="form-control-group">
                     <div className="col">
                       <label>Número</label>
-                      <Field name="numero" type="text" />
+                      <Field name="numero" type="number" />
                     </div>
                     <div className="col">
                       <label>Especialidade</label>
@@ -160,7 +161,7 @@ const Doctor = () => {
                     </div>
                     <div className="col">
                       <label>CRM</label>
-                      <Field name="crm" type="text" />
+                      <Field name="crm" type="number" />
                     </div>
                   </div>
 
