@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { Container } from '../../src/components/templates/Container'
 import { ContainerPageBody } from '../../src/components/templates/ContainerPageBody'
 import { PageBody } from '../../src/components/templates/PageBody'
@@ -12,22 +13,14 @@ import Head from 'next/head'
 
 const Doctor = () => {
   const [headerSearch, setHeaderSearch] = useState('')
-  /* const [name, setName] = useState('')
-  const [age, setAge] = useState(0)
-  const [sex, setSex] = useState('')
-  const [cpf, setCPF] = useState('')
-  const [rg, setRG] = useState('')
-  const [phone, setPhone] = useState('')
-  const [address, setAddress] = useState('')
-  const [cep, setCEP] = useState('')
-  const [city, setCity] = useState('')
-  const [number, setNumber] = useState(0)
-  const [speciality, setSpeciality] = useState('')
-  const [crm, setCRM] = useState(0) */
+  const router = useRouter()
   const cookies = parseCookies()
 
-  const onSubmit = async (values, actions) => {
+  const onSubmit = async (values, setFieldValue) => {
     try {
+
+      console.log(values)
+
       const { data: data } = await api.post(
         'register_doctor',
         {
@@ -51,7 +44,7 @@ const Doctor = () => {
           },
         },
       )
-
+      console.log(data)
       router.push('/home')
     } catch (error) {
       console.log(error)
@@ -70,10 +63,9 @@ const Doctor = () => {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((res) => res.json())
       .then((data) => {
-        setFieldValue('logradouro', data.logradouro)
+        setFieldValue('address', data.logradouro)
 
-        setFieldValue('cidade', data.localidade)
-        
+        setFieldValue('city', data.localidade)
       })
   }
   return (
@@ -89,6 +81,7 @@ const Doctor = () => {
       <PageBody>
         <ContainerPageBody>
           <Header search={headerSearch} onSearch={setHeaderSearch} disabled />
+          <h2 className="title-Form">Cadastrar Doutor</h2>
           <C.ContainerForm>
             <Formik
               onSubmit={onSubmit}
@@ -101,7 +94,7 @@ const Doctor = () => {
               }}
               render={({ values, setFieldValue }) => (
                 <Form>
-                  <h2>Informações Gerais</h2>
+                 
                   <div className="form-control-group">
                     <div className="col">
                       <label>Nome</label>
@@ -127,11 +120,10 @@ const Doctor = () => {
                     </div>
                     <div className="col">
                       <label>Telefone</label>
-                      <Field name="telefone" type="text" />
+                      <Field name="phone" type="text" />
                     </div>
                   </div>
 
-                  <h2>Endereço e Especialidade </h2>
                   <div className="form-control-group">
                     <div className="col">
                       <label>Cep</label>
@@ -143,17 +135,17 @@ const Doctor = () => {
                     </div>
                     <div className="col">
                       <label>Cidade</label>
-                      <Field name="cidade" type="text" />
+                      <Field name="city" type="text" />
                     </div>
                     <div className="col">
                       <label>Endereço</label>
-                      <Field name="logradouro" type="text" />
+                      <Field name="address" type="text" />
                     </div>
                   </div>
                   <div className="form-control-group">
                     <div className="col">
                       <label>Número</label>
-                      <Field name="numero" type="number" />
+                      <Field name="number" type="number" />
                     </div>
                     <div className="col">
                       <label>Especialidade</label>

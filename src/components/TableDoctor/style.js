@@ -9,18 +9,22 @@ export const TableDoc = styled.table`
 
   thead {
     height: 40px;
-    background-color: ${(props) => props.theme.colors['primary+1']};
+    background-color: #d9d9d990;
   }
 
   th {
     text-align: center;
+    font-weight: bold;
+    font-size: 18px;
   }
   tr {
     height: 40px;
+    font-weight: bold;
   }
   tr:nth-child(even) {
-    background-color: ${(props) => props.theme.colors['dark']};
-    color: white;
+    background-color: #d9d9d990;
+    color: #54b5b7;
+    font-weight: bold;
   }
   td {
     max-width: 160px;

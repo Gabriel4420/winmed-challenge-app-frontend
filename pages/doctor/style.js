@@ -8,7 +8,7 @@ export const ContainerForm = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #d9d9d990;
-  margin-top: 100px;
+  margin-top:30px;
   margin-bottom: 500px !important;
   padding: 10px;
   height: 500px;
