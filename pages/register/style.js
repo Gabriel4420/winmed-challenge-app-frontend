@@ -1,31 +1,28 @@
-.background {
-    background-image: linear-gradient(#54b5b7a8,
-            #8c73c7b6),
-        url("../public/bg.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+import styled from 'styled-components'
 
-
-}
-
-.form {
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(#54b5b7a8, #8c73c7b6), url('./bg.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-
-
-}
-
-
-.form form {
+  }
+  h1 {
+    font-size: 50px;
+    font-weight: 200;
+    text-shadow: 0.05em 0.05em 0.05em #333;
+    color: white;
+  }
+  .form form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,43 +30,32 @@
     width: 50%;
     margin: 10px;
     background-image: linear-gradient(#296364, #413262);
-    padding: 40px;
+    padding: 50px;
     border-radius: 40px;
-}
-
-.form form .image_responsive {
-    margin-bottom: 20px;
-}
-
-.form input {
+  }
+  .form input {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     line-height: 35px;
     margin-bottom: 20px;
-    margin-top: 20px;
     color: #333;
     font-weight: bold;
-    width: 80%;
+    width: 82%;
     outline: 0;
     border: none;
     border-radius: 30px;
     padding-left: 20px;
     font-size: 20px;
-
-
-
+    &::placeholder {
+      color: #333;
+      font-weight: bold;
+      text-shadow: none;
+    }
     box-shadow: 5px 4px 5px -3px rgba(0, 0, 0, 0.64);
-}
-
-.form input::placeholder {
-    color: #333;
-    font-weight: 200;
-    text-shadow: none;
-}
-
-.form button {
+  }
+  .form button {
     background-color: #54b5b7;
     color: white;
     border: none;
@@ -79,21 +65,23 @@
     margin-bottom: 39px;
     width: 20%;
     font-weight: bold;
-   
-}
-
-.form button:hover {
+  }
+  .form button:hover {
     background-color: #276869;
-}
-
-.link:hover {
-    text-decoration: underline;
-}
-
-.showPassword {
-    padding: 10px !important;
-    border-radius: 50%;
-    width: 8% !important;
+  }
+  a {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  a:hover {
     cursor: pointer;
-    margin-bottom: 5px !important;
-}
+    text-decoration: underline;
+  }
+  .showPassword2 {
+    padding: 10px !important;
+    border-radius: 100px;
+    width: 10% !important;
+    cursor: pointer;
+    margin-bottom: 25px !important;
+  }
+`
