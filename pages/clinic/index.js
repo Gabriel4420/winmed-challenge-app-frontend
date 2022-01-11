@@ -6,7 +6,7 @@ import { PageBody } from '../../src/components/templates/PageBody'
 import { Formik, Field, Form } from 'formik'
 import { parseCookies } from 'nookies'
 import api from '../../src/services/api'
-import {ContainerForm} from './style'
+import { ContainerForm } from '../../src/components/templates/ContainerForm'
 import Menu from '../../src/components/menu'
 import Header from '../../src/components/templates/Header'
 import Head from 'next/head'
@@ -18,9 +18,6 @@ const Clinic = () => {
 
   const onSubmit = async (values, setFieldValue) => {
     try {
-
-  
-
       const { data: data } = await api.post(
         'register_clinic',
         {
@@ -30,7 +27,6 @@ const Clinic = () => {
           cep: values.cep,
           city: values.city,
           number: values.number,
- 
         },
         {
           headers: {
@@ -89,7 +85,6 @@ const Clinic = () => {
               }}
               render={({ values, setFieldValue }) => (
                 <Form>
-                 
                   <div className="form-control-group">
                     <div className="col">
                       <label>Nome</label>
@@ -110,11 +105,11 @@ const Clinic = () => {
                   </div>
 
                   <div className="form-control-group">
-                  <div className="col">
+                    <div className="col">
                       <label>Cidade</label>
                       <Field name="city" type="text" />
                     </div>
-                    
+
                     <div className="col">
                       <label>Endereço</label>
                       <Field name="address" type="text" />
