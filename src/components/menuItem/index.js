@@ -19,7 +19,7 @@ const MenuItem = ({ icon, link, title }) => {
       href={link}
       onClick={handleLinkClick}
     >
-      <MenuIcon src={icon} />
+      <MenuIcon src={icon} alt="icon-menu" />
       <ReactToolTip id="tip-top" place="top" effect="solid"  />
       <ReactToolTip id="tip-right" place="right" effect="solid" />
     </Container>

@@ -9,7 +9,7 @@ const Header = ({ search, onSearch, disabled }) => {
   const handleChange = (e) => onSearch(e.target.value)
   return (
     <Container>
-      <Logo src="./envelope.png" />
+      <Logo src="./envelope.png" alt="envelop-logo" />
 
       <div className="input-avatar-area">
         {!disabled && (
@@ -30,7 +30,7 @@ const Header = ({ search, onSearch, disabled }) => {
             <h3>Rodolfo</h3>
             <h4>admin</h4>
           </div>
-          <Avatar src="./avatar.png" />
+          <Avatar src="./avatar.png" alt="avatar" />
         </div>
       </div>
     </Container>

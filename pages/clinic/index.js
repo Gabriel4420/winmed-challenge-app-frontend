@@ -6,7 +6,7 @@ import { PageBody } from '../../src/components/templates/PageBody'
 import { Formik, Field, Form } from 'formik'
 import { parseCookies } from 'nookies'
 import api from '../../src/services/api'
-import * as C from './style'
+import {ContainerForm} from './style'
 import Menu from '../../src/components/menu'
 import Header from '../../src/components/templates/Header'
 import Head from 'next/head'
@@ -77,7 +77,7 @@ const Clinic = () => {
         <ContainerPageBody>
           <Header search={headerSearch} onSearch={setHeaderSearch} disabled />
           <h2 className="title-Form">Cadastrar Clinica</h2>
-          <C.ContainerForm>
+          <ContainerForm>
             <Formik
               onSubmit={onSubmit}
               validateOnMount
@@ -133,7 +133,7 @@ const Clinic = () => {
                 </Form>
               )}
             />
-          </C.ContainerForm>
+          </ContainerForm>
         </ContainerPageBody>
       </PageBody>
     </Container>

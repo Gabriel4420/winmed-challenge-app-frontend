@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react'
 import { ContainerPageBody } from '../../src/components/templates/ContainerPageBody'
 import { Container } from '../../src/components/templates/Container'
 import { PageBody } from '../../src/components/templates/PageBody'
-import * as Component from './style'
-import api from '../../src/services/api'
+import { TablesArea, TableContent } from './style'
 import Header from '../../src/components/templates/Header'
 import Menu from '../../src/components/menu'
 import Head from 'next/head'
 import TableDoctor from '../../src/components/TableDoctor'
-import { parseCookies } from 'nookies'
 import TableClinic from '../../src/components/TableClinics'
 
 const Home = () => {
@@ -28,16 +26,16 @@ const Home = () => {
       <PageBody>
         <ContainerPageBody>
           <Header search={headerSearch} onSearch={setHeaderSearch} />
-          <Component.TablesArea>
+          <TablesArea>
             <h3>Doutores Cadastrados</h3>
-            <Component.TableContent>
+            <TableContent>
               <TableDoctor />
-            </Component.TableContent>
+            </TableContent>
             <h3>Clínicas Cadastradas</h3>
-            <Component.TableContent>
+            <TableContent>
               <TableClinic />
-            </Component.TableContent>
-          </Component.TablesArea>
+            </TableContent>
+          </TablesArea>
         </ContainerPageBody>
       </PageBody>
     </Container>

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import api from '../../src/services/api'
 import bcrypt from 'bcryptjs'
 import InputPassword from '../../src/components/atomics/InputPassword'
-import * as Component from './style'
+import { Container } from './style'
 
 const Register = () => {
   const [name, setName] = useState('')
@@ -21,14 +21,11 @@ const Register = () => {
     try {
       const saltpassword = await bcrypt.hash(password, 8)
 
-      const { data: data } = await api.post(
-        'user',
-        {
-          name: name,
-          email: email,
-          password: saltpassword,
-        },
-       )
+      const { data: data } = await api.post('user', {
+        name: name,
+        email: email,
+        password: saltpassword,
+      })
 
       router.push('/')
     } catch (error) {
@@ -44,7 +41,7 @@ const Register = () => {
     setTypeCamp('password')
   }
   return (
-    <Component.Container>
+    <Container>
       <Head>
         <title>Winmed - Cadastrar Usuário</title>
         <meta
@@ -99,7 +96,7 @@ const Register = () => {
           </button>
         </form>
       </section>
-    </Component.Container>
+    </Container>
   )
 }
 
