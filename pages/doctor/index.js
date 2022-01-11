@@ -70,11 +70,37 @@ const Doctor = () => {
   return (
     <Container>
       <Head>
-        <title>Winmed - Cadastrar Médico</title>
+      <title>Winmed - Cadastrar Médico</title>
+        <meta name="title" content="Winmed - Cadastrar Médico" />
         <meta
           name="description"
-          content="Aplicativo para cadastro de medicos e pacientes, um futuro ERP"
+          content="App para cadastro de medicos e clinicas"
         />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://winmed-challenge-app-frontend.vercel.app/"
+        />
+        <meta property="og:title" content="Winmed - Cadastrar Médico" />
+        <meta
+          property="og:description"
+          content="App para cadastro de medicos e clinicas"
+        />
+        <meta property="og:image" content="./winmedlogo.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://winmed-challenge-app-frontend.vercel.app/"
+        />
+        <meta property="twitter:title" content="Winmed - Cadastrar Médico" />
+        <meta
+          property="twitter:description"
+          content="App para cadastro de medicos e clinicas"
+        />
+        <meta property="twitter:image" content="./winmedlogo.png" />
+        <link rel="shortcut icon" href="./winmedlogo.png" />
       </Head>
       <Menu />
       <PageBody>

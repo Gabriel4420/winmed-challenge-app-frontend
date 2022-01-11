@@ -34,7 +34,7 @@ const Home = () => {
           property="og:description"
           content="App para cadastro de medicos e clinicas"
         />
-        <meta property="og:image" content="../../public/winmedlogo.png" />
+        <meta property="og:image" content="./winmedlogo.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -46,7 +46,8 @@ const Home = () => {
           property="twitter:description"
           content="App para cadastro de medicos e clinicas"
         />
-        <meta property="twitter:image" content="../../public/winmedlogo.png" />
+        <meta property="twitter:image" content="./winmedlogo.png" />
+        <link rel="shortcut icon" href="./winmedlogo.png" />
       </Head>
       <Menu />
       <PageBody>

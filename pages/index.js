@@ -61,11 +61,36 @@ export default function Home() {
     <div className={styles.background}>
       <Head>
         <title>Desafio Frontend Winmed</title>
+        <meta name="title" content="Winmed - Login" />
         <meta
           name="description"
           content="App para cadastro de medicos e clinicas"
         />
-        <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://winmed-challenge-app-frontend.vercel.app/"
+        />
+        <meta property="og:title" content="Desafio Frontend Winmed" />
+        <meta
+          property="og:description"
+          content="App para cadastro de medicos e clinicas"
+        />
+        <meta property="og:image" content="./winmedlogo.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://winmed-challenge-app-frontend.vercel.app/"
+        />
+        <meta property="twitter:title" content="Desafio Frontend Winmed" />
+        <meta
+          property="twitter:description"
+          content="App para cadastro de medicos e clinicas"
+        />
+        <meta property="twitter:image" content="./winmedlogo.png" />
+        <link rel="shortcut icon" type="image/png" href="./winmedlogo.png" />
       </Head>
 
       <main className={styles.form}>

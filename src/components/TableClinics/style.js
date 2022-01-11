@@ -20,7 +20,7 @@ export const TableCli = styled.table`
   }
   tr:nth-child(even) {
     background-color: #d9d9d990;
-    color: #54b5b7;
+    color: #276869;
     font-weight: bold;
   }
   td {
