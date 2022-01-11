@@ -4,7 +4,7 @@ import Head from 'next/head'
 import api from '../../src/services/api'
 import bcrypt from 'bcryptjs'
 import InputPassword from '../../src/components/atomics/InputPassword'
-import { Container } from './style'
+import { ContainerRegister } from '../../src/components/templates/ContainerRegister'
 
 const Register = () => {
   const [name, setName] = useState('')
@@ -41,7 +41,7 @@ const Register = () => {
     setTypeCamp('password')
   }
   return (
-    <Container>
+    <ContainerRegister>
       <Head>
         <title>Winmed - Cadastrar Usuário</title>
         <meta
@@ -96,7 +96,7 @@ const Register = () => {
           </button>
         </form>
       </section>
-    </Container>
+    </ContainerRegister>
   )
 }
 
