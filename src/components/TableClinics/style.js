@@ -13,10 +13,12 @@ export const TableCli = styled.table`
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+    color: #276869;
   }
   tr {
     height: 40px;
     font-weight: bold;
+    color: #f2f2f2;
   }
   tr:nth-child(even) {
     background-color: #d9d9d990;

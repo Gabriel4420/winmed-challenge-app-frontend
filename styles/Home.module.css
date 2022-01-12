@@ -57,9 +57,6 @@
     border-radius: 30px;
     padding-left: 20px;
     font-size: 20px;
-
-
-
     box-shadow: 5px 4px 5px -3px rgba(0, 0, 0, 0.64);
 }
 
@@ -79,14 +76,14 @@
     margin-bottom: 39px;
     width: 20%;
     font-weight: bold;
-   
+
 }
 
 .form button:hover {
     background-color: #276869;
 }
 
-.link:hover {
+.link a:hover {
     text-decoration: underline;
 }
 
@@ -97,3 +94,109 @@
     cursor: pointer;
     margin-bottom: 5px !important;
 }
+
+@media(min-width:280px) and (max-width:480px) {
+    .form form {
+        width: 90%;
+        margin: 5px;
+    }
+
+    .form input {
+        width: 95%;
+        line-height: 20px;
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .showPassword {
+        padding: 5px !important;
+        width: 20% !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .form button {
+        width: 50%;
+        padding: 5px;
+        font-size: 14px;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .form input::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media(min-width:481px) and (max-width:767px) {
+    .form form {
+        width: 90%;
+        margin: 5px;
+    }
+
+    .form input {
+        width: 82%;
+        line-height: 30px;
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .showPassword {
+        padding: 5px !important;
+        width: 10% !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .form button {
+        width: 50%;
+        padding: 5px;
+        font-size: 18px;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .form input::placeholder {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    .form form {
+        width: 90%;
+        margin: 5px;
+    }
+
+    .form input {
+        width: 82%;
+        line-height: 30px;
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    .showPassword {
+        padding: 5px !important;
+        width: 10% !important;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .form button {
+        width: 50%;
+        padding: 5px;
+        font-size: 18px;
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .form input::placeholder {
+        font-size: 18px;
+    }
+}
+
+@media(min-width:1025px) and (max-width:1280px) {}
+
+@media(min-width: 1280px) {}

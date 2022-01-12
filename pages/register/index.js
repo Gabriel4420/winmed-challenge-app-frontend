@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
+import Link from 'next/link'
+import styles from '../../styles/Home.module.css'
 import api from '../../src/services/api'
 import bcrypt from 'bcryptjs'
 import InputPassword from '../../src/components/atomics/InputPassword'
@@ -95,6 +97,9 @@ const Register = () => {
             Cadastrar
           </button>
         </form>
+        <Link className={styles.link} href="/">
+          Voltar ao login
+        </Link>
       </section>
     </ContainerRegister>
   )

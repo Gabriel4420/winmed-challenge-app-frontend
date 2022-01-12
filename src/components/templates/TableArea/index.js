@@ -5,4 +5,8 @@ export const TablesArea = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  h3 {
+    color: #f5f5f5;
+  }
 `

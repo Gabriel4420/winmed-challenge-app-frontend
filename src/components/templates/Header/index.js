@@ -27,8 +27,12 @@ const Header = ({ search, onSearch, disabled }) => {
 
         <div className="avatar-area">
           <div className="texts-Area">
-            <h3>Rodolfo</h3>
-            <h4>admin</h4>
+            <div>
+              <h3>Rodolfo</h3>
+            </div>
+            <div>
+              <h4>admin</h4>
+            </div>
           </div>
           <Avatar src="./avatar.png" alt="avatar" />
         </div>

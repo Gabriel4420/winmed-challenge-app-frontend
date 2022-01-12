@@ -82,6 +82,109 @@ export const ContainerRegister = styled.div`
     border-radius: 100px;
     width: 10% !important;
     cursor: pointer;
-    margin-bottom: 25px !important;
+    margin-bottom: 15px !important;
+  }
+
+  @media (min-width: 280px) and (max-width: 480px) {
+    .form form {
+      width: 90%;
+      margin: 5px;
+    }
+
+    .form input {
+      width: 100%;
+      line-height: 20px;
+      font-size: 14px;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .showPassword2 {
+      padding: 5px !important;
+      width: 15% !important;
+    }
+
+    .form button {
+      width: 50%;
+      padding: 5px;
+      font-size: 14px;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    .form input::placeholder {
+      font-size: 14px;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .form form {
+      width: 90%;
+      margin: 5px;
+    }
+
+    .form input {
+      width: 82%;
+      line-height: 30px;
+      font-size: 18px;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .showPassword {
+      padding: 5px !important;
+      width: 10% !important;
+      margin-top: 10px !important;
+      margin-bottom: 0px !important;
+    }
+
+    .form button {
+      width: 50%;
+      padding: 5px;
+      font-size: 18px;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    .form input::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .form form {
+      width: 90%;
+      margin: 5px;
+    }
+
+    .form input {
+      width: 82%;
+      line-height: 30px;
+      font-size: 18px;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .showPassword {
+      padding: 5px !important;
+      width: 10% !important;
+      margin-top: 10px !important;
+      margin-bottom: 0px !important;
+    }
+
+    .form button {
+      width: 50%;
+      padding: 5px;
+      font-size: 18px;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    .form input::placeholder {
+      font-size: 18px;
+    }
   }
 `

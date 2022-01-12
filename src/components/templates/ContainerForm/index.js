@@ -8,10 +8,9 @@ export const ContainerForm = styled.div`
   justify-content: center;
   width: 100%;
   background-color: #d9d9d990;
-  margin-top:30px;
-  margin-bottom: 500px !important;
+  margin-top: 0px;
+  margin-bottom: 0px !important;
   padding: 10px;
-  height: 500px;
 
   .form-control-group {
     display: flex;
@@ -44,5 +43,44 @@ export const ContainerForm = styled.div`
     background-color: blue;
     color: white;
     cursor: pointer;
+  }
+
+  @media (min-width: 280px) and (max-width: 480px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    .form-control-group {
+      flex-direction: column;
+    }
+
+    .form-control-group input {
+      width: 90%;
+    }
+
+    .btn-cadastrar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    margin-top: 0;
+    margin-bottom: 0;
+   
+
+    .form-control-group input {
+      width: 90%;
+    }
+
+    .btn-cadastrar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
   }
 `
