@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { Container } from '../../src/components/templates/Container'
 import { ContainerPageBody } from '../../src/components/templates/ContainerPageBody'
@@ -10,25 +10,33 @@ import { ContainerForm } from '../../src/components/templates/ContainerForm'
 import Menu from '../../src/components/menu'
 import Header from '../../src/components/templates/Header'
 import Head from 'next/head'
+import InputMask from 'react-input-mask'
 
 const Doctor = () => {
   const [headerSearch, setHeaderSearch] = useState('')
+  const [phone, setPhone] = useState('')
+  const [cpf, setCPF] = useState('')
+  const [rg, setRG] = useState('')
+  const [id, setId] = useState('')
   const router = useRouter()
   const cookies = parseCookies()
 
-  const onSubmit = async (values, setFieldValue) => {
+  useEffect(() => {})
+
+  const onSubmit = async (values) => {
     try {
       console.log(values)
 
       const { data: data } = await api.post(
         'register_doctor',
         {
+          idDoctor: values.idDoctor,
           name: values.name,
           sex: values.sex,
           age: values.age,
-          cpf: values.cpf,
-          rg: values.rg,
-          phone: values.phone,
+          cpf: cpf,
+          rg: rg,
+          phone: phone,
           address: values.address,
           cep: values.cep,
           city: values.city,
@@ -70,7 +78,7 @@ const Doctor = () => {
   return (
     <Container>
       <Head>
-      <title>Winmed - Cadastrar Médico</title>
+        <title>Winmed - Cadastrar Médico</title>
         <meta name="title" content="Winmed - Cadastrar Médico" />
         <meta
           name="description"
@@ -121,6 +129,11 @@ const Doctor = () => {
                 <Form>
                   <div className="form-control-group">
                     <div className="col">
+                      <Field
+                        name="idDoctor"
+                        type="text"
+                        style={{ display: 'none' }}
+                      />
                       <label>Nome</label>
                       <Field name="name" type="text" />
                     </div>
@@ -136,15 +149,33 @@ const Doctor = () => {
                   <div className="form-control-group">
                     <div className="col">
                       <label>CPF</label>
-                      <Field name="cpf" type="text" />
+                      <InputMask
+                        mask="999.999.999-99"
+                        name="cpf"
+                        type="text"
+                        value={cpf}
+                        onChange={(e) => setCPF(e.target.value)}
+                      />
                     </div>
                     <div className="col">
                       <label>RG</label>
-                      <Field name="rg" type="text" />
+                      <InputMask
+                        mask="99.999.999-9"
+                        name="rg"
+                        type="text"
+                        value={rg}
+                        onChange={(e) => setRG(e.target.value)}
+                      />
                     </div>
                     <div className="col">
                       <label>Telefone</label>
-                      <Field name="phone" type="text" />
+                      <InputMask
+                        mask="(99)99999-9999"
+                        name="phone"
+                        type="text"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
                     </div>
                   </div>
 

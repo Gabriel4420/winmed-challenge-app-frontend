@@ -38,4 +38,17 @@ export const TableDoc = styled.table`
     padding-left: 5px;
     padding-right: 5px;
   }
+
+  td button {
+    border: none;
+    background-color: #a10b00;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f01100;
+    }
+  }
 `
