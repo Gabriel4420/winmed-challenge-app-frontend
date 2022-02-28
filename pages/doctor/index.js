@@ -211,10 +211,13 @@ const Doctor = () => {
                       <Field name="crm" type="number" />
                     </div>
                   </div>
-
-                  <button type="submit" className="btn-cadastrar">
-                    Cadastrar
-                  </button>
+                  <div className="form-control-group">
+                    <div className="col">
+                      <button type="submit" className="btn-cadastrar">
+                        Cadastrar
+                      </button>
+                    </div>
+                  </div>
                 </Form>
               )}
             />

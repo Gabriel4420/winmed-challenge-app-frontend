@@ -17,6 +17,21 @@ const TableClinic = () => {
       .catch((err) => console.log(err))
   }, [cookies])
 
+  const handleDelete = async (id) => {
+    try {
+      await api.delete(`delete_clinic/${id}`, {
+        data: {
+          name: id,
+        },
+        headers: {
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <TableCli>
       <thead>
@@ -27,7 +42,7 @@ const TableClinic = () => {
           <th>Cep</th>
           <th>Cidade</th>
           <th>Numero</th>
-          
+          <th>Deletar</th>
         </tr>
       </thead>
 
@@ -38,10 +53,13 @@ const TableClinic = () => {
             <td>{data.phone}</td>
             <td>{data.address}</td>
             <td>{data.cep}</td>
-
             <td>{data.city}</td>
             <td>{data.number}</td>
-            
+            <td>
+              <button type="button" onClick={() => handleDelete(data.name)}>
+                &#x26A0; Delete
+              </button>
+            </td>
           </tr>
         ))}
       </tbody>

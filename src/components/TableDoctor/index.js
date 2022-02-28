@@ -50,7 +50,7 @@ const TableDoctor = () => {
           <th>Numero</th>
           <th>Especialidade</th>
           <th>CRM</th>
-          <th>Ações</th>
+          <th>Deletar</th>
         </tr>
       </thead>
 

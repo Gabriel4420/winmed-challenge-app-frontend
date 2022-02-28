@@ -40,9 +40,14 @@ export const ContainerForm = styled.div`
   .btn-cadastrar {
     padding: 10px;
     border: none;
-    background-color: blue;
+    background-color: #309ed9;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .btn-cadastrar:hover {
+    background-color: #2278a3;
   }
 
   @media (min-width: 280px) and (max-width: 480px) {
@@ -67,7 +72,6 @@ export const ContainerForm = styled.div`
   @media (min-width: 481px) and (max-width: 767px) {
     margin-top: 0;
     margin-bottom: 0;
-   
 
     .form-control-group input {
       width: 90%;

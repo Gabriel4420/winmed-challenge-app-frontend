@@ -62,7 +62,7 @@ const Clinic = () => {
   return (
     <Container>
       <Head>
-      <title>Winmed - Cadastrar Clinicas</title>
+        <title>Winmed - Cadastrar Clinicas</title>
         <meta name="title" content="Winmed - Cadastrar Clinicas" />
         <meta
           name="description"
@@ -148,9 +148,13 @@ const Clinic = () => {
                     </div>
                   </div>
 
-                  <button type="submit" className="btn-cadastrar">
-                    Cadastrar
-                  </button>
+                  <div className="form-control-group">
+                    <div className="col">
+                      <button type="submit" className="btn-cadastrar">
+                        Cadastrar
+                      </button>
+                    </div>
+                  </div>
                 </Form>
               )}
             />
